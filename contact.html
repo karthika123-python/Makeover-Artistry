@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6d7e4;
+        }
+        .header{
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 40px;
+        }
+        .logo img{
+            width: 100px;
+            height: 100px;
+            background: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+        }
+        .navbar a{
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .searchbar{
+            background-color: whitesmoke;
+            padding: 15px 12px;
+            border: none;
+            border-radius: 8px;
+        }
+        .searchbar input{
+            border: none;
+            font-size: 20px;
+            background-color: whitesmoke;
+            font-weight: 700;
+        }
+        .searchbar i{
+            font-size: 25px;
+            color: #888;
+        }
+        .icon i{
+            font-size: 50px;
+            color: white;
+        }
+        .hamburger{
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        .container{
+            background-color: #E272CD;
+            border-radius: 15px;
+            font-size: 25px;margin: 30px;
+        }
+        .container ul{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            gap: 30px;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .container h2{
+            font-size: 30px;
+        }
+        .social-icon{
+            font-size: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-right: 50px;
+        }
+        .hours{
+            display: flex;
+            gap: 50px;
+            margin: 30px;
+        }
+        .reach{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+            font-size: 25px;
+        }
+        .form{
+            width: 35%;
+        }
+        .rows{
+            display: flex;
+            gap: 100px;
+            margin-bottom: 20px;
+        }
+        label{
+           display: block;
+           margin-bottom: 30px;
+        }
+        .input-line{
+            border-bottom: 2px solid black;
+            margin-bottom: 30px;
+        }
+        .btn{
+            margin: 30px;
+            padding:15px 35px;
+            border: none;
+            border-radius: 6px;
+            background-color: royalblue;
+            font-size: 25px;
+            color: white;
+            margin-left: 5px;
+        }
+        .reach iframe{
+            width: 500px;
+            height: 400px;
+        }
+        .footer{
+            background-color: #583150;
+            padding: 20px;
+            color: white;
+        }
+        footer ul{
+            list-style-type: none;
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            align-items: center;
+        }
+        .footer h3{
+            margin-bottom: 4px;
+            font-size: 25px;
+        }
+        .footer p{
+            margin-bottom: 2px;
+            font-size: 20px;
+        }
+        .copyrights{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            border-top: 2px solid white;
+            padding: 10px;
+        }
+        .icons{
+            gap: 20px;
+            display: flex;
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        @media (max-width:768px) {
+            .navbar{
+                display: none;
+                flex-direction: column;
+                width: 200px;
+                background-color: #583150;
+                color: white;
+                padding: 15px;
+                border-radius: 8px;
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                z-index: 1000;
+            }
+            .navbar.show{
+                display: flex;
+            }
+            .hamburger{
+                display: block;
+            }
+            .searchbar{
+                flex: 1;
+                max-width: 150px;
+            }
+            .searchbar input{
+                max-width: 150px;
+            }
+            .icon i{
+                font-size: 30px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            .container{
+                font-size: 15px;
+            }
+            .container ul{
+                flex-direction: column;
+                gap: 10px;
+            }
+            .container h2{
+                font-size: 18px;
+            }
+            .social-icon{
+                font-size: 30px;
+                gap: 10px;
+            }
+            .hours{
+                gap: 10px;
+            }
+            .reach{
+                flex-direction: column;
+                gap: 10px;
+                font-size: 16px;
+            }
+            .rows{
+                gap: 20px;
+                flex-direction: column;
+            }
+            .btn{
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .reach iframe{
+                width: 200px;
+                height: 150px;
+            }
+            .footer ul{
+                flex-direction: column;
+                gap: 20px;
+            }
+            .copyrights{
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+        @media (min-width:769px) and (max-width:992px) {
+            .navbar{
+                gap:20px;
+            }
+            .navbar a{
+                font-size: 18px;
+            }
+            .searchbar input{
+                font-size: 16px;
+                max-width: 120px;
+            }
+            .icon i{
+                font-size: 35px;
+            }
+             h1{
+                font-size: 29px;
+            }
+            .container{
+                font-size: 20px;
+            }
+            .container ul{
+                gap: 20px;
+            }
+            .container h2{
+                font-size: 25px;
+            }
+            .social-icon{
+                font-size: 35px;
+                gap: 20px;
+            }
+            .hours{
+                gap: 20px;
+            }
+            .reach{
+                flex-direction: column;
+                gap: 10px;
+                font-size: 18px;
+            }
+            .rows{
+                gap: 30px;
+            }
+            .btn{
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+            .reach iframe{
+                width: 400px;
+                height: 250px;
+            }
+            .footer ul{
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+            }
+            .copyrights{
+                gap: 50px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="icon">
+            <a href="signup.html"><i class="fa-solid fa-user-circle"></i></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <h1>CONTACT</h1>
+    <div class="container">
+        <ul>
+            <li>
+                <h2>Address</h2>
+                <p><i class="fa fa-map-marker-alt"></i> 8-8-686/DR/9,Banjara Hills,<br>Hyderabad, Telangana 500034.</p>
+            </li>
+            <li>
+                <h2>Contact</h2>
+                <p><i class="fa fa-phone"></i> Phone: 07674083778</p>
+                <p><i class="fa fa-envelope"></i> Email:BookingMyna@Gmail.Com</p>
+                <p class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </p>
+            </li>
+            <li>
+                <h2>Business Hours</h2>
+                <div class="hours">
+                    <div class="days">
+                    <p><i class="fa-solid fa-clock-rotate-left"></i> Mon -Fri</p>
+                    <p><i class="fa-solid fa-clock-rotate-left"></i> Saturday</p>
+                    <p><i class="fa-solid fa-clock-rotate-left"></i> Sunday</p>
+                </div>
+                <div class="time">
+                    <p>9:00 Am - 5:00 Pm</p>
+                    <p>8:00 Am - 4:00 Pm</p>
+                    <p>Closed</p>
+                </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h1>Reach Us</h1>
+    <div class="reach">
+        <div class="form">
+            <div class="rows">
+                <div class="row">
+                <label>First Name</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="row">
+                <label>Last Name</label>
+                <div class="input-line"></div>
+            </div>
+            </div>
+            <label>Email*</label>
+            <div class="input-line"></div>
+            <label>Message</label>
+            <div class="input-line"></div>
+            <button type="submit" class="btn">Send</button>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504558.32357368455!2d77.35690023924299!3d8.892428977543752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0413764b783b55%3A0x3c7ad314b584ca50!2sNellai%20makeup%20artist!5e0!3m2!1sen!2sin!4v1758605274418!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <footer class="footer">
+            <ul>
+            <li>
+                <h3>Quick Links</h3>
+                <p>Home</p>
+                <p>About</p>
+                <p>Services</p>
+                <p>Portfolio</p>
+                <p>Contact</p>
+            </li>
+            <li>
+                <h3>Services</h3>
+                <p>Mission</p>
+                <p>Integrations</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>Industries</p>
+            </li>
+            <li>
+                <h3>Other Links</h3>
+                <p>Blog</p>
+                <p>Testimonials</p>
+                <p>Privacy Policy</p>
+                <p>Cancellation and Refund</p>
+                <p>Terms of Service</p>
+            </li>
+            <li>
+                <h3>Contact Info</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 8-2-686/DR/9, Banjara Hills, Hyderbad,<br>Telangana 500034</p>
+                <p><i class="fa fa-phone"></i> +91-869-011-0011</p>
+                <p><i class="fa fa-envelope"></i> bookingmyna@gmail.com</p>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>&copy;2008-2025 Makeover booking service. All Rights Reserved</p>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger=document.getElementById("hamburger");
+        const navbar=document.getElementById("navbar");
+         hamburger.addEventListener("click",()=>{
+            navbar.classList.toggle("show");
+         });
+    </script>
+</body>
+</html>

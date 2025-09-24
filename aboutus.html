@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: auto;
+            padding: 0;
+            background-color: #e6d7e4;
+            text-transform: capitalize;
+            width: 100%;
+        }
+        .header{
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 40px;
+        }
+        .logo img{
+            width: 100px;
+            height: 100px;
+            background: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+        }
+        .navbar a{
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .searchbar{
+            background-color: whitesmoke;
+            padding: 15px 12px;
+            border: none;
+            border-radius: 8px;
+        }
+        .searchbar input{
+            border: none;
+            font-size: 20px;
+            background-color: whitesmoke;
+            font-weight: 700;
+        }
+        .searchbar i{
+            font-size: 25px;
+            color: #888;
+        }
+        .icon i{
+            font-size: 50px;
+            color: white;
+        }
+        .hamburger{
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+        h1{text-align: center;font-size: 35px;font-weight: bold;margin-top: 20px;}
+        .container{
+            display: block;
+            margin: auto;
+            text-align: left;
+            padding: 40px;
+            border: 10px solid dimgray;
+            width: 900px;
+        }
+        .container h2{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .container p{
+            font-size: 22px;
+            font-weight: 500;
+        }
+        .container .highlight{
+            font-size: 25px;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .card1 img{
+            object-fit: cover;          
+            border-radius: 50%;         
+            border: 5px solid royalblue; 
+            width: 200px;
+            height: 200px;
+        }
+        .name{
+            color: royalblue;
+            margin-top: 20px;
+            font-size: 28px;
+        }
+        .card2 h2{
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .card2 p{
+            font-size: 20px;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .card2 p a{
+            color: black;
+        }
+        .footer{
+            background-color: #583150;
+            padding: 20px;
+            color: white;
+            width: 100%;
+        }
+        footer ul{
+            list-style-type: none;
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            align-items: center;
+        }
+        .footer h3{
+            margin-bottom: 4px;
+            font-size: 25px;
+        }
+        .footer p{
+            margin-bottom: 2px;
+            font-size: 20px;
+        }
+        .copyrights{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            border-top: 2px solid white;
+            padding: 10px;
+        }
+       .icons{
+            gap: 20px;
+            display: flex;
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        @media (max-width:768px) {
+            h1{
+                font-size: 25px;
+                margin-top: 0;
+            }
+            .container{
+                padding: 20px;
+                border: 5px solid dimgray;
+            }
+            .container h2{
+                font-size: 20px;
+            }
+            .container p{ 
+                font-size: 18px; 
+            }
+            .container .highlight{ 
+                font-size: 18px; 
+            } 
+            .card{
+                justify-content: space-between;
+                gap: 10px;
+            }
+            .card1 img{
+                object-fit: cover; 
+                border-radius: 50%; 
+                border: 2px solid royalblue; 
+                width: 100px; 
+                height: 100px;
+            }
+            .name{
+                margin-top: 0; 
+                font-size: 18px; 
+            }
+            .card2 h2{ 
+                font-size: 20px;
+                text-align: left; 
+            }
+            .card2 p{
+                font-size: 18px; 
+                text-align: left; 
+            }
+            .navbar{
+                display: none;
+                flex-direction: column;
+                width: 200px;
+                background-color: #583150;
+                color: white;
+                padding: 15px;
+                border-radius: 8px;
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                z-index: 1000;
+            }
+            .navbar.show{
+                display: flex;
+            }
+            .hamburger{
+                display: block;
+            }
+            .searchbar{
+                flex: 1;
+                max-width: 150px;
+            }
+            .searchbar input{
+                max-width: 150px;
+            }
+            .icon i{
+                font-size: 30px;
+            }
+            .footer ul{
+                flex-direction: column;
+                gap: 20px;
+            }
+            .copyrights{
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+        @media(min-width:769px) and (max-width:992px) {
+            h1{
+                font-size: 27px;
+                margin-top: 20px;
+            }
+            .container{
+                padding: 30px;
+                border: 7px solid dimgray;
+                margin: auto;
+            }
+            .container h2{
+                font-size: 25px;
+            }
+            .container p{ 
+                font-size: 23px; 
+            }
+            .container .highlight{ 
+                font-size: 23px; 
+            } 
+            .card{
+                justify-content: space-between;
+                gap: 30px;
+            }
+            .card1 img{
+                object-fit: cover; 
+                border-radius: 50%; 
+                border: 3px solid royalblue; 
+                width: 200px; 
+                height: 200px;
+            }
+            .name{
+                margin-top: 20px; 
+                font-size: 25px; 
+            }
+            .card2 h2{ 
+                font-size: 25px;
+                text-align: left; 
+            }
+            .card2 p{
+                font-size: 18px; 
+                text-align: left; 
+            }
+            .navbar{
+                gap:20px;
+            }
+            .navbar a{
+                font-size: 18px;
+            }
+            .searchbar input{
+                font-size: 16px;
+                max-width: 120px;
+            }
+            .icon i{
+                font-size: 35px;
+            }
+            .footer ul{
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="icon">
+            <a href="signup.html"><i class="fa-solid fa-user-circle"></i></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <h1>ABOUT US</h1>
+    <div class="container">
+        <h2>Quality Professionals For All your makeup<br> and hairstyling needs</h2>
+        <p>Get reliable and quality service from certified <br>professionals with satisfactions guaranteed!</p>
+        <p>At BookingMyna all our professionals are qualified, trained and <br> certified. Our professionals are on-boarded only on a through<br>evaluation and passed by aquality score given by a senior advisory<br>panel who happen to be the best in the industry.<br>not only that, we also have customer protection included, where <br>customers enjoy a replacement guarantee on all replacement<br>request raised at least 48 hours before the booked event day.<br>Guaranteed reversal of any advance payments done by client in an<br>event of no show from any booked professional from bookingMyna.</p>
+        <p class="highlight">Happy customers and professionals are our motto</p>
+    </div>
+    <div class="card">
+        <div class="card1">
+            <img src="image24.jpg" alt="Image 24">
+            <h3 class="name">Sathyasree Sutari</h3>
+            <h3>Course director & celebrity makeup artist</h3>
+        </div>
+        <div class="card2">
+            <h2>Our advisory partners</h2>
+            <p>All our professionals have passed a quality score set by one of the<br>top rated academies in the country, first foundation PRO.<br>Professionals are also mentored on quality servicing guidelines<br>By <a href="#firstfoundationpro">First Foundation PRO</a></p>
+        </div>
+    </div>
+    <footer class="footer">
+            <ul>
+            <li>
+                <h3>Quick Links</h3>
+                <p>Home</p>
+                <p>About</p>
+                <p>Services</p>
+                <p>Portfolio</p>
+                <p>Contact</p>
+            </li>
+            <li>
+                <h3>Services</h3>
+                <p>Mission</p>
+                <p>Integrations</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>Industries</p>
+            </li>
+            <li>
+                <h3>Other Links</h3>
+                <p>Blog</p>
+                <p>Testimonials</p>
+                <p>Privacy Policy</p>
+                <p>Cancellation and Refund</p>
+                <p>Terms of Service</p>
+            </li>
+            <li>
+                <h3>Contact Info</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 8-2-686/DR/9, Banjara Hills, Hyderbad,<br>Telangana 500034</p>
+                <p><i class="fa fa-phone"></i> +91-869-011-0011</p>
+                <p><i class="fa fa-envelope"></i> bookingmyna@gmail.com</p>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>&copy;2008-2025 Makeover booking service. All Rights Reserved</p>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger=document.getElementById("hamburger");
+        const navbar=document.getElementById("navbar");
+         hamburger.addEventListener("click",()=>{
+            navbar.classList.toggle("show");
+         });
+    </script>
+</body>
+</html>

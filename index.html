@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6d7e4;
+            text-transform: capitalize;
+        }
+        .header{
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 40px;
+        }
+        .logo img{
+            width: 100px;
+            height: 100px;
+            background: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+        }
+        .navbar a{
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .searchbar{
+            background-color: whitesmoke;
+            padding: 15px 12px;
+            border: none;
+            border-radius: 8px;
+        }
+        .searchbar input{
+            border: none;
+            font-size: 20px;
+            background-color: whitesmoke;
+            font-weight: 700;
+        }
+        .searchbar i{
+            font-size: 25px;
+            color: #888;
+        }
+        .icon i{
+            font-size: 50px;
+            color: white;
+        }
+        .hamburger{
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+        .hero{
+            background-color:  #E272CD;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        .tagline{
+            padding: 20px;
+            font-size: 25px;
+        }
+        .hero .btn{
+            background-color: #991483;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+        }
+        .hero img{
+            height: 350px;
+            object-fit: cover;
+        }
+        .container1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            font-size: 23px;
+        }
+        .card1{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            
+        }
+        .card1 h3{
+            margin-top:60px;
+    
+        }
+        .card1 button{
+            padding: 15px 45px;
+            border: none;
+            font-weight: bold;
+            border-radius: 7px;
+            margin-top: 40px;
+            font-size: 20px;
+            background-color: gainsboro;
+        }
+        .card1 img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        .container2{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 30px;
+            background-color: #E272CD;
+            border-radius: 20px;
+            margin: 10px 40px 0 40px;
+            font-size: 23px;
+            line-height: 1.4;
+        }
+        .makeup img{
+            height: 350px;
+            object-fit: cover;
+        }
+        .container3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .box{
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 700px;
+        }
+        .box1{
+            background-color: skyblue;
+            padding: 40px;
+        }
+        .box1 h5{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .box1  button{
+            padding: 15px 45px;
+            border: none;
+            font-weight: bold;
+            border-radius: 7px;
+            margin-top: 40px;
+            font-size: 20px;
+            background-color: gainsboro;
+        }
+        .lipstick img{
+            height: 600px;
+        }
+        .testimonial{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            margin: 20px;
+        }
+        .testimonial-card{
+            background-color: ghostwhite;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 30px;
+            font-weight: 700;
+            width: 350px;
+            height: 280px;
+        }
+        .review-card{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .name-icon{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: royalblue;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .stars{
+            color: gold;
+            font-size: 35px;
+        }
+        .footer{
+            background-color: #583150;
+            padding: 20px;
+            color: white;
+        }
+        footer ul{
+            list-style-type: none;
+            background-color: #583150;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+            align-items: center;
+        }
+        .footer h3{
+            margin-bottom: 4px;
+            font-size: 25px;
+        }
+        .footer p{
+            margin-bottom: 2px;
+            font-size: 20px;
+        }
+        .copyrights{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            border-top: 2px solid white;
+            padding: 10px;
+        }
+        .icons{
+            gap: 20px;
+            display: flex;
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        @media (max-width: 992px) {
+            .navbar{
+                gap:20px;
+            }
+            .navbar a{
+                font-size: 18px;
+            }
+            .searchbar input{
+                font-size: 16px;
+                max-width: 120px;
+            }
+            .icon i{
+                font-size: 35px;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .hero img {
+                height: 250px;
+                width: 100%;
+                object-fit: contain;
+            }
+            .tagline {
+                font-size: 20px;
+            }
+            .container2 {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .container3 {
+                flex-direction: column;
+            }
+            .box {
+                width: 100%;
+            }
+           .lipstick img {
+                height: auto;
+                max-width: 90%;
+            }
+           .testimonial {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .testimonial-card {
+                width: 100%;
+                max-width: 400px;
+            }
+            .footer ul{
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+            }
+            .copyrights{
+                gap: 50px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 768px) {
+            .navbar{
+                display: none;
+                flex-direction: column;
+                width: 200px;
+                background-color: #583150;
+                color: white;
+                padding: 15px;
+                border-radius: 8px;
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                z-index: 1000;
+            }
+            .navbar.show{
+                display: flex;
+            }
+            .hamburger{
+                display: block;
+            }
+            .searchbar{
+                flex: 1;
+                max-width: 150px;
+            }
+            .searchbar input{
+                max-width: 150px;
+            }
+            .icon i{
+                font-size: 30px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .tagline {
+                font-size: 18px;
+            }
+            .card1 {
+                width: 100%;
+                height: auto;
+            }
+            .card1 h3 {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+            .card1 button {
+                margin-top: 20px;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .container1 {
+                gap: 15px;
+            }
+            .stars {
+                font-size: 24px;
+            }
+            .footer ul{
+                flex-direction: column;
+                gap: 20px;
+            }
+            .copyrights{
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="icon">
+            <a href="signup.html"><i class="fa-solid fa-user-circle"></i></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="tagline">
+            <h1>Quality Bridal Makeup & <br>Hair Styling Services</h1>
+            <p>Certified professionals to create your bridal makeup & hairstyling needs</p>
+            <a href="bridalpackages.html"><button type="submit" class="btn">Request Quote <i class="fa-solid fa-arrow-right ms-2"></i></button></a>
+        </div>
+        <div class="logo">
+            <img src="image1.png" alt="Image 1">
+        </div>
+    </div>
+    <div class="container1">
+        <div class="card1">
+            <h3>BRIDAL <br>MAKEUP</h3>
+            <a href="bridalpackages.html"><button type="submit">BOOK NOW</button></a>
+        </div>
+        <div class="card1">
+            <img src="image2.jpeg" alt="Image 1">
+        </div>
+        <div class="card1">
+            <h3>PARTY<br>MAKEUP</h3>
+            <a href="bridalpackages.html"><button type="submit">BOOK NOW</button></a>
+        </div>
+        <div class="card1">
+            <img src="image3.jpg" alt="Image 2">
+        </div>
+        <div class="card1">
+            <img src="image4.jpg" alt="Image 3">
+        </div>
+        <div class="card1">
+            <h3>HAIR <br>STYLING</h3>
+            <a href="bridalpackages.html"><button type="submit">BOOK NOW</button></a>
+        </div>
+        <div class="card1">
+            <img src="image5.jpg" alt="Image 4">
+        </div>
+        <div class="card1">
+            <h3>SAREE <br>DRAPPING</h3>
+            <a href="bridalpackages.html"><button type="submit">BOOK NOW</button></a>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="makeup">
+            <img src="image6.png" alt="Image">
+        </div>
+        <div class="quotes">
+            <h3>Why Choose US ?</h3>
+            <ul>
+                <li>Industry standard quality products</li>
+                <li>Bridal Makeup and hairstyling services provided by<br>friendly certified professionals with advanced<br>techniques</li>
+                <li>Certified bridal makeup and hairstyling professionals<br>at affordable budgets</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="lipstick">
+            <img src="image7.png" alt="Image 1">
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h1>Bridal Makeup Luxury<br>Package</h1>
+                <p>Include in bridal elegance: Experience our luxury makeup<br>Package!</p>
+                <h5>8 Hr</h5>
+                <h5>Rs 25000 Negotiable</h5>
+                <button type="submit">Request To Book</button>
+            </div>
+            <div class="box1">
+                <h1>Bridal Makeup Premium<br>Package</h1>
+                <p>Include in bridal elegance: Experience our luxury makeup<br>Package!</p>
+                <h5>6 Hr</h5>
+                <h5>Rs 20000 Negotiable</h5>
+                <button type="submit">Request To Book</button>
+            </div>
+        </div>
+        <div class="lipstick">
+            <img src="image8.png" alt="Image 2">
+        </div>
+    </div>
+    <div class="testimonial">
+        <div class="testimonial-card">
+        <div class="review-card">
+                <div class="name-icon">P</div>
+                <h4>Prakash</h4>
+        </div>
+            <div class="stars">★★★★★</div>
+            <p>Google overall rating BookingMyna</p>
+        </div>
+        <div class="testimonial-card">
+        <div class="review-card">
+                <div class="name-icon">M</div>
+                <h4>Manoj Panda</h4>
+        </div>
+        <div class="stars">★★★★★</div>
+            <p>Service  is good</p>
+        </div>
+        <div class="testimonial-card">
+        <div class="review-card">
+                <div class="name-icon">S</div>
+                <h4>Shanvi Shree</h4>
+        </div>
+            <div class="stars">★★★★★</div>
+            <p>Very Quick Response with goog artist</p>
+        </div>
+        </div>
+    </div>
+    <footer class="footer">
+            <ul>
+            <li>
+                <h3>Quick Links</h3>
+                <p>Home</p>
+                <p>About</p>
+                <p>Services</p>
+                <p>Portfolio</p>
+                <p>Contact</p>
+            </li>
+            <li>
+                <h3>Services</h3>
+                <p>Mission</p>
+                <p>Integrations</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>Industries</p>
+            </li>
+            <li>
+                <h3>Other Links</h3>
+                <p>Blog</p>
+                <p>Testimonials</p>
+                <p>Privacy Policy</p>
+                <p>Cancellation and Refund</p>
+                <p>Terms of Service</p>
+            </li>
+            <li>
+                <h3>Contact Info</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 8-2-686/DR/9, Banjara Hills, Hyderbad,<br>Telangana 500034</p>
+                <p><i class="fa fa-phone"></i> +91-869-011-0011</p>
+                <p><i class="fa fa-envelope"></i> bookingmyna@gmail.com</p>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>&copy;2008-2025 Makeover booking service. All Rights Reserved</p>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger=document.getElementById("hamburger");
+        const navbar=document.getElementById("navbar");
+         hamburger.addEventListener("click",()=>{
+            navbar.classList.toggle("show");
+         });
+    </script>
+</body>
+</html>
